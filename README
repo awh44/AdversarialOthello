@@ -1,0 +1,44 @@
+Included are the given files for an Othello game (OthelloState.java, OthelloPlayer.java,
+OthelloMove.java, and OthelloRandomPlayer.java) as well as a modified driver (Test.java) and three
+implementations of agents: OthelloMinimaxPlayerAWH.java (the minimax agent),
+OthelloAlphabetaPlayerAWH.java (an alpha-beta pruning agent), and OthelloMonteCarloPlayerAWH (a
+Monte Carlo agent). Also note the two scoring classes included: OthelloScorerStandard and
+OthelloScorerImproved. The OthelloScorerImproved is the implemention of the improved heuristic for
+Part 1 of the assignment. Please see that file's comments for the explanation of the new heuristic
+and its justification. Also included are a makefile and some timing results.
+
+To run the program, type the commands:
+	make compile
+	java cs380.othello.Test size player1 depth1 scorer1 player2 depth2 scorer2
+		(or run SIZE=size P1=player1 D1=depth1 S1=scorer1 P2=player2 D2=depth2 S2=scorer2 make)
+Here, size is the board size (so "4" for 4x4, "6" for 6x6, etc.); player is the type of agent
+to use ("m" for minimax, "a" for alphabeta, "c" for Monte Carlo, "r" for random); depth is the
+depth to which the minimax/alphabeta agent(s) will search or the number of iterations the Monte
+Carlo agent will use; and scorer is the type of scoring the agent will use for its heuristic ("s"
+for OthelloStandardScorer and "i" for OthelloScorerImproved). Note that some arguments don't apply
+in certain configurations; for example, depth does not apply to a random agent, and scorer does not
+apply to random or Monte Carlo agents. However, the arguments must still be included; they are
+simply ignored by the driver. Also note that the player1 versions refer to the "O" player and the
+player2 ones the "X" player.
+
+Please also note the timing results included for minimax, alphabeta, and Monte Carlo, under the
+appropriately-named "*_timing" files. These tests were performed with both agents as the agent type
+with boards of size 8. Note that minimax could not approach anywhere near the times that alphabeta
+achieved. What alphabeta achieved in four seconds (for depth 8), minimax could not finish given 12
+minutes. Every other depth produced results that were at least twice as fast under alphabeta pruning
+(except for depth 4, which produced results very close to twice as fast). Note that the Monte Carlo
+agents at 1000 iterations take about the same amount of time (slightly longer) as the alphabeta
+agents. Also note that, based on informal experiments, the Monte Carlo agent with 1000 iterations
+tends to win against the alphabeta one at depth eight more often than the other way around. As the
+iterations in the Monte Carlo agent increase, note also that the times increase almost perfectly
+linearly (O(n)), which makes sense given the algorithm, giving some indication of the cost of using
+more iterations.
+
+As for testing of the OthelloScorerImproved, this was done by first running:
+	java cs380.othello.Test 8 m [depth] s m [depth] s
+i.e., board of size eight, two minimax agents, depth of depth for both. Then, it was noticed which
+player won this game. Then, the player that lost was switched to using the improved scorer, and at
+all of the tried depths, the improved scorer invariably won. This appears to prove the new
+heuristic is a better measure of performance, generally.
+
+Please see the comments in the code for more detailed information on the implementations.

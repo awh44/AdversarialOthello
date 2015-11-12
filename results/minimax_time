@@ -1,0 +1,24 @@
+Depth 4:
+real	0m0.208s
+user	0m0.240s
+sys	0m0.030s
+
+Depth 5:
+real	0m1.907s
+user	0m1.969s
+sys	0m0.053s
+
+Depth 6:
+real	0m22.048s
+user	0m22.580s
+sys	0m0.069s
+
+Depth 7:
+real	2m22.041s
+user	2m25.634s
+sys	0m0.229s
+
+Depth 8 (unfinished run):
+real	12m46.368s
+user	13m3.548s
+sys	0m1.110s

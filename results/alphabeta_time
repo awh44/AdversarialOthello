@@ -1,0 +1,45 @@
+Depth 4:
+real	0m0.138s
+user	0m0.175s
+sys	0m0.017s
+
+Depth 5:
+real	0m0.236s
+user	0m0.266s
+sys	0m0.023s
+
+Depth 6:
+real	0m0.587s
+user	0m0.665s
+sys	0m0.031s
+
+Depth 7:
+real	0m1.407s
+user	0m1.444s
+sys	0m0.072s
+
+Depth 8:
+real	0m4.764s
+user	0m4.869s
+sys	0m0.071s
+
+Depth 9:
+real	0m24.319s
+user	0m24.745s
+sys	0m0.080s
+
+Depth 10:
+real	0m33.305s
+user	0m34.213s
+sys	0m0.112s
+
+Depth 11:
+real	3m10.667s
+user	3m15.387s
+sys	0m0.281s
+
+Depth 12:
+real	7m8.205s
+user	7m18.228s
+sys	0m0.609s
+

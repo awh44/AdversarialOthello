@@ -1,0 +1,15 @@
+1000 iterations:
+real	0m7.661s
+user	0m8.044s
+sys	0m0.060s
+
+10000 iterations:
+real	1m7.614s
+user	1m9.286s
+sys	0m0.725s
+
+50000 iterations:
+real	5m33.112s
+user	5m51.904s
+sys	0m1.446s
+
